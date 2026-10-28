@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Ola Verde — Panel Operativo</title>
+  <title>La Ola Verde — Panel Operativo Sinaloa</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { background-color: #f4f6f8; font-family: system-ui, -apple-system, sans-serif; }
@@ -16,10 +16,11 @@
 
   <div class="max-w-6xl mx-auto space-y-6">
     <header class="space-y-1">
-      <h1 class="text-3xl font-bold text-brand flex items-center gap-2">🌱 La Ola Verde — Panel Operativo</h1>
-      <p class="text-gray-600 text-sm md:text-base">Monitoreo y registro de ruta de riego, árboles y biodiversidad.</p>
+      <h1 class="text-3xl font-bold text-brand flex items-center gap-2">🌱 La Ola Verde — Panel Operativo Sinaloa</h1>
+      <p class="text-gray-600 text-sm md:text-base">Registro de ruta de riego, árboles nativos y biodiversidad aviar regional.</p>
     </header>
 
+    <!-- KPIs -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-200">
         <span class="text-xs font-semibold text-gray-500 uppercase">Árboles Regados</span>
@@ -39,33 +40,20 @@
       </div>
     </div>
 
+    <!-- Formulario de Registro -->
     <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-      <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">📋 Registro de Ruta de Riego</h2>
-      <form id="registro-form" class="space-y-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">📋 Registro de Campo</h2>
+      <form id="registro-form" class="space-y-6">
+        
+        <!-- Datos Principales -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Código de Lote / Sector:</label>
-            <input type="text" id="lote" placeholder="Ej. SECTOR-NORTE-01" required class="w-full px-3 py-2 border rounded-lg text-sm">
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Código Lote / Sector:</label>
+            <input type="text" id="lote" placeholder="Ej. SECTOR-CULIACAN-01" required class="w-full px-3 py-2 border rounded-lg text-sm">
           </div>
           <div>
             <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Operador ID:</label>
             <input type="text" id="operador" placeholder="Ej. OP-CARLOS" required class="w-full px-3 py-2 border rounded-lg text-sm">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Número de Árboles Regados:</label>
-            <input type="number" id="arboles" placeholder="15" min="1" required class="w-full px-3 py-2 border rounded-lg text-sm">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Litros de Agua Aplicados:</label>
-            <input type="number" step="0.1" id="litros" placeholder="250.00" min="0" required class="w-full px-3 py-2 border rounded-lg text-sm">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Especie de Árbol / Planta:</label>
-            <input type="text" id="especie" placeholder="Ej. Lirio, Mesquite, Amapa" required class="w-full px-3 py-2 border rounded-lg text-sm">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Aves / Fauna Avistada:</label>
-            <input type="number" id="aves" placeholder="0" min="0" value="0" class="w-full px-3 py-2 border rounded-lg text-sm">
           </div>
           <div>
             <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Estado del Sector:</label>
@@ -76,14 +64,84 @@
             </select>
           </div>
           <div>
-            <label class="block text-xs font-bold text-red-700 uppercase mb-1">🔑 Clave de Seguridad del Proyecto:</label>
-            <input type="password" id="pin" placeholder="PIN de acceso (1234)" required class="w-full px-3 py-2 border rounded-lg text-sm">
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Número de Árboles:</label>
+            <input type="number" id="arboles" placeholder="15" min="1" required class="w-full px-3 py-2 border rounded-lg text-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Litros de Agua Aplicados:</label>
+            <input type="number" step="0.1" id="litros" placeholder="250.00" min="0" required class="w-full px-3 py-2 border rounded-lg text-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Total Aves Avistadas:</label>
+            <input type="number" id="aves" placeholder="0" min="0" value="0" class="w-full px-3 py-2 border rounded-lg text-sm">
           </div>
         </div>
+
+        <!-- Opción Múltiple: Árboles de Sinaloa -->
+        <div class="space-y-2 border-t pt-4">
+          <label class="block text-sm font-bold text-gray-800 uppercase">🌳 Especies de Árboles de Sinaloa (Opción Múltiple):</label>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
+              <input type="checkbox" name="especie_chk" value="Amapa Rosa" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_627428-MLM54395972505_032023-O.webp" class="w-full h-24 object-cover rounded-md mb-2">
+              <span class="text-xs font-bold text-gray-700 text-center">Amapa Rosa</span>
+            </label>
+            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
+              <input type="checkbox" name="especie_chk" value="Mesquite" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
+              <img src="https://blob.luznoticias.mx/images/2025/06/07/el-mesquite-sinaloa-calor-1-1645cffe.jpg" class="w-full h-24 object-cover rounded-md mb-2">
+              <span class="text-xs font-bold text-gray-700 text-center">Mesquite</span>
+            </label>
+            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
+              <input type="checkbox" name="especie_chk" value="Guamúchil" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=300" class="w-full h-24 object-cover rounded-md mb-2">
+              <span class="text-xs font-bold text-gray-700 text-center">Guamúchil</span>
+            </label>
+            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
+              <input type="checkbox" name="especie_chk" value="Lirio / Venadilla" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
+              <img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=300" class="w-full h-24 object-cover rounded-md mb-2">
+              <span class="text-xs font-bold text-gray-700 text-center">Venadilla / Lirio</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Opción Múltiple: Aves de Sinaloa -->
+        <div class="space-y-2 border-t pt-4">
+          <label class="block text-sm font-bold text-gray-800 uppercase">🐦 Especies de Aves de Sinaloa (Opción Múltiple):</label>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
+              <input type="checkbox" name="ave_chk" value="Paloma Huilota" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Mourning_Dove_2006.jpg" class="w-full h-24 object-cover rounded-md mb-2">
+              <span class="text-xs font-bold text-gray-700 text-center">Paloma Huilota</span>
+            </label>
+            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
+              <input type="checkbox" name="ave_chk" value="Carpintero Elegante" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
+              <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSLQLqYWL5MVfP8B0A40Khg9ODgULe8Tng7uhETbyEfCZELNlsxUaHs0GA9v2yS7Aibg0MWsNeGvnz7D7E" class="w-full h-24 object-cover rounded-md mb-2">
+              <span class="text-xs font-bold text-gray-700 text-center">Carpintero</span>
+            </label>
+            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
+              <input type="checkbox" name="ave_chk" value="Colibrí Canelo" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
+              <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?w=300" class="w-full h-24 object-cover rounded-md mb-2">
+              <span class="text-xs font-bold text-gray-700 text-center">Colibrí</span>
+            </label>
+            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
+              <input type="checkbox" name="ave_chk" value="Chachalaca Sinaloense" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
+              <img src="https://images.unsplash.com/photo-1612024782955-49fae79e42bb?w=300" class="w-full h-24 object-cover rounded-md mb-2">
+              <span class="text-xs font-bold text-gray-700 text-center">Chachalaca</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Clave de Seguridad -->
+        <div class="border-t pt-4">
+          <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Clave de Seguridad:</label>
+          <input type="password" id="pin" placeholder="••••" required class="w-full px-3 py-2 border rounded-lg text-sm">
+        </div>
+
         <button type="submit" class="w-full brand-green text-white font-bold py-3 rounded-lg shadow text-base">💾 Guardar Registro Seguro en Neon</button>
       </form>
     </section>
 
+    <!-- Tabla de Registros -->
     <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
       <div class="flex justify-between items-center mb-4">
         <h2 class="text-xl font-bold text-gray-800">📊 Registros en Base de Datos</h2>
@@ -93,11 +151,12 @@
         <table class="w-full text-left text-sm border-collapse">
           <thead>
             <tr class="brand-green text-white">
+              <th class="p-3">ID</th>
               <th class="p-3">Lote</th>
               <th class="p-3">Árboles</th>
               <th class="p-3">Litros</th>
-              <th class="p-3">Especie</th>
-              <th class="p-3">Aves</th>
+              <th class="p-3">Especies Árboles</th>
+              <th class="p-3">Aves Avistadas</th>
               <th class="p-3">Estado</th>
               <th class="p-3">Operador</th>
               <th class="p-3">Fecha / Hora</th>
@@ -112,14 +171,21 @@
   <script>
     document.getElementById('registro-form').addEventListener('submit', async function(e) {
       e.preventDefault();
+
+      const especiesSel = Array.from(document.querySelectorAll('input[name="especie_chk"]:checked')).map(cb => cb.value);
+      const especiesTexto = especiesSel.length > 0 ? especiesSel.join(', ') : 'No seleccionada';
+
+      const avesSel = Array.from(document.querySelectorAll('input[name="ave_chk"]:checked')).map(cb => cb.value);
+      const avesCant = parseInt(document.getElementById('aves').value) || 0;
+
       const payload = {
         lote: document.getElementById('lote').value,
         operador: document.getElementById('operador').value,
         arboles: parseInt(document.getElementById('arboles').value),
         litros: parseFloat(document.getElementById('litros').value),
-        especie: document.getElementById('especie').value,
-        aves: parseInt(document.getElementById('aves').value) || 0,
-        estado: document.getElementById('estado').value,
+        especie: especiesTexto,
+        aves: avesCant,
+        estado: document.getElementById('estado').value + (avesSel.length > 0 ? ` [Aves: ${avesSel.join(', ')}]` : ''),
         pin: document.getElementById('pin').value
       };
 
@@ -153,7 +219,7 @@
         const especiesSet = new Set();
 
         if (registros.length === 0) {
-          tbody.innerHTML = `<tr><td colspan="8" class="text-center py-6 text-gray-500">No hay registros guardados.</td></tr>`;
+          tbody.innerHTML = `<tr><td colspan="9" class="text-center py-6 text-gray-500">No hay registros guardados.</td></tr>`;
         } else {
           registros.forEach(r => {
             totalArboles += Number(r.arboles);
@@ -164,12 +230,13 @@
             const fila = document.createElement('tr');
             fila.className = "hover:bg-gray-50 transition";
             fila.innerHTML = `
-              <td class="p-3 font-bold text-gray-700">${r.lote}</td>
+              <td class="p-3 font-bold text-gray-700">#${r.id_codigo}</td>
+              <td class="p-3">${r.lote}</td>
               <td class="p-3 font-semibold text-green-700">${r.arboles}</td>
               <td class="p-3">${r.litros} L</td>
-              <td class="p-3">${r.especie}</td>
-              <td class="p-3">${r.aves}</td>
-              <td class="p-3"><span class="px-2 py-1 rounded text-xs font-bold ${r.estado === 'Excelente' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'}">${r.estado}</span></td>
+              <td class="p-3 font-medium text-gray-800">${r.especie}</td>
+              <td class="p-3 font-medium text-purple-700">${r.aves}</td>
+              <td class="p-3"><span class="px-2 py-1 rounded text-xs font-bold bg-green-100 text-green-800">${r.estado}</span></td>
               <td class="p-3">${r.operador}</td>
               <td class="p-3 text-xs text-gray-500">${new Date(r.creado_en).toLocaleString('es-MX')}</td>
             `;
