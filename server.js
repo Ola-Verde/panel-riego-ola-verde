@@ -13,7 +13,6 @@ const pool = new Pool({
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Consultar registros
 app.get('/api/registros', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM registros_riego ORDER BY creado_en DESC');
@@ -23,11 +22,11 @@ app.get('/api/registros', async (req, res) => {
   }
 });
 
-// Guardar nuevo registro
 app.post('/api/registros', async (req, res) => {
   const { lote, operador, arboles, litros, especie, aves, estado, pin } = req.body;
 
-  if (pin !== '1234') {
+  // Clave de seguridad actualizada
+  if (pin !== '7865') {
     return res.status(401).json({ error: 'Clave de seguridad incorrecta' });
   }
 
@@ -47,5 +46,5 @@ app.post('/api/registros', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Servidor escuchando en puerto ${port}`);
+  console.log(`Servidor activo en el puerto ${port}`);
 });
