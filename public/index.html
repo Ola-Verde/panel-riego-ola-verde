@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Ola Verde — Culiacán iNaturalist API</title>
+  <title>La Ola Verde — Culiacán, Sinaloa</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { background-color: #f4f6f8; font-family: system-ui, -apple-system, sans-serif; }
@@ -16,8 +16,8 @@
 
   <div class="max-w-6xl mx-auto space-y-6">
     <header class="space-y-1">
-      <h1 class="text-3xl font-bold text-brand flex items-center gap-2">🌱 La Ola Verde — Culiacán, Sinaloa</h1>
-      <p class="text-gray-600 text-sm md:text-base">Catálogo en vivo filtrado exclusivamente para el Municipio de Culiacán via iNaturalist API.</p>
+      <h1 class="text-3xl font-bold text-brand flex items-center gap-2">🌱 La Ola Verde — Panel Culiacán, Sinaloa</h1>
+      <p class="text-gray-600 text-sm md:text-base">Catálogo de flora nativa y fauna aviar de Culiacán.</p>
     </header>
 
     <!-- KPIs -->
@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <!-- Formulario de Registro -->
+    <!-- Formulario -->
     <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
       <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">📋 Registro de Campo</h2>
       <form id="registro-form" class="space-y-6">
@@ -77,98 +77,95 @@
           </div>
         </div>
 
-        <!-- Selección de Árboles -->
+        <!-- Árboles -->
         <div class="space-y-2 border-t pt-4">
-          <label class="block text-sm font-bold text-gray-800 uppercase">🌳 Flora de Culiacán (iNaturalist API - Opción Múltiple):</label>
+          <label class="block text-sm font-bold text-gray-800 uppercase">🌳 Árboles de Culiacán (Opción Múltiple):</label>
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Amapa Rosa" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img id="img-amapa-rosa" src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=400&q=80" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://ecosdelbosque.com/sites/default/files/styles/specie_slider/public/2026-03/Tabebuia_rosea_18.jpg?itok=U3kEtBdg" onerror="this.src='https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=400&q=80'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-800 text-center">Amapa Rosa</span>
-              <span id="credit-amapa-rosa" class="text-[9px] text-gray-400 text-center truncate w-full">Culiacán, SIN</span>
             </label>
 
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Amapa Amarilla" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img id="img-amapa-amarilla" src="https://images.unsplash.com/photo-1617173944883-6ffbd35d584d?auto=format&fit=crop&w=400&q=80" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1617173944883-6ffbd35d584d?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Amapa+Amarilla'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-800 text-center">Amapa Amarilla</span>
-              <span id="credit-amapa-amarilla" class="text-[9px] text-gray-400 text-center truncate w-full">Culiacán, SIN</span>
             </label>
 
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Mesquite" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img id="img-mesquite" src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=400&q=80" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Mesquite'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-800 text-center">Mesquite</span>
-              <span id="credit-mesquite" class="text-[9px] text-gray-400 text-center truncate w-full">Culiacán, SIN</span>
             </label>
 
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Guamúchil" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img id="img-guamuchil" src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Guamuchil'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-800 text-center">Guamúchil</span>
-              <span id="credit-guamuchil" class="text-[9px] text-gray-400 text-center truncate w-full">Culiacán, SIN</span>
             </label>
 
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Venadilla / Lirio" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img id="img-venadilla" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Venadilla'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-800 text-center">Venadilla / Lirio</span>
-              <span id="credit-venadilla" class="text-[9px] text-gray-400 text-center truncate w-full">Culiacán, SIN</span>
             </label>
 
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Huanacaxtle" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img id="img-huanacaxtle" src="https://images.unsplash.com/photo-1511497584788-876761c11969?auto=format&fit=crop&w=400&q=80" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1511497584788-876761c11969?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Huanacaxtle'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-800 text-center">Huanacaxtle</span>
-              <span id="credit-huanacaxtle" class="text-[9px] text-gray-400 text-center truncate w-full">Culiacán, SIN</span>
             </label>
           </div>
         </div>
 
-        <!-- Selección de Aves -->
+        <!-- Aves -->
         <div class="space-y-2 border-t pt-4">
-          <label class="block text-sm font-bold text-gray-800 uppercase">🐦 Aves de Culiacán (iNaturalist API - Opción Múltiple):</label>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          <label class="block text-sm font-bold text-gray-800 uppercase">🐦 Aves de Culiacán (Opción Múltiple):</label>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-3">
+            
+            <!-- Paloma Aliblanca -->
+            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
+              <input type="checkbox" name="ave_chk" value="Paloma aliblanca (Zenaida asiatica)" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Zenaida_asiatica_-Tuscon_-Arizona_-USA_-8a.jpg/500px-Zenaida_asiatica_-Tuscon_-Arizona_-USA_-8a.jpg" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Paloma+Aliblanca'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-800 text-center">Paloma aliblanca</span>
+              <span class="text-[10px] italic text-gray-500 text-center">(Zenaida asiatica)</span>
+            </label>
+
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Urraca Hermosa" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img id="img-urraca" src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=400&q=80" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Urraca+Hermosa'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-800 text-center">Urraca Hermosa</span>
-              <span id="credit-urraca" class="text-[9px] text-gray-400 text-center truncate w-full">Culiacán, SIN</span>
             </label>
 
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Carpintero Elegante" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img id="img-carpintero" src="https://images.unsplash.com/photo-1522921820572-347e402d99bf?auto=format&fit=crop&w=400&q=80" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1522921820572-347e402d99bf?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Carpintero'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-800 text-center">Carpintero Elegante</span>
-              <span id="credit-carpintero" class="text-[9px] text-gray-400 text-center truncate w-full">Culiacán, SIN</span>
             </label>
 
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Colibrí Canelo" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img id="img-colibri" src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=400&q=80" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Colibri'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-800 text-center">Colibrí Canelo</span>
-              <span id="credit-colibri" class="text-[9px] text-gray-400 text-center truncate w-full">Culiacán, SIN</span>
             </label>
 
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Paloma Huilota" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img id="img-huilota" src="https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&w=400&q=80" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Paloma+Huilota'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-800 text-center">Paloma Huilota</span>
-              <span id="credit-huilota" class="text-[9px] text-gray-400 text-center truncate w-full">Culiacán, SIN</span>
             </label>
 
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Chachalaca" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img id="img-chachalaca" src="https://images.unsplash.com/photo-1612024782955-49fae79e42bb?auto=format&fit=crop&w=400&q=80" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1612024782955-49fae79e42bb?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Chachalaca'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-800 text-center">Chachalaca</span>
-              <span id="credit-chachalaca" class="text-[9px] text-gray-400 text-center truncate w-full">Culiacán, SIN</span>
             </label>
 
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Garza Blanca" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img id="img-garza" src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=400&q=80" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Garza+Blanca'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-800 text-center">Garza Blanca</span>
-              <span id="credit-garza" class="text-[9px] text-gray-400 text-center truncate w-full">Culiacán, SIN</span>
             </label>
           </div>
         </div>
@@ -211,43 +208,6 @@
   </div>
 
   <script>
-    // Cargar observaciones registradas específicamente en el Municipio de Culiacán (place_id=10839)
-    async function cargarFotoINaturalistCuliacan(taxonName, elementImgId, elementCreditId) {
-      try {
-        const url = `https://api.inaturalist.org/v1/observations?place_id=10839&taxon_name=${encodeURIComponent(taxonName)}&per_page=1&photos=true&licenses=cc-by,cc-by-nc,cc0`;
-        const res = await fetch(url);
-        const data = await res.json();
-        if (data.results && data.results.length > 0) {
-          const obs = data.results[0];
-          if (obs.photos && obs.photos.length > 0) {
-            const photoUrl = obs.photos[0].url.replace('square', 'medium');
-            const user = obs.user ? obs.user.login : 'iNaturalist';
-            document.getElementById(elementImgId).src = photoUrl;
-            document.getElementById(elementCreditId).innerText = `© ${user} (Culiacán)`;
-          }
-        }
-      } catch (e) {
-        console.log("Usando imagen estática para:", taxonName);
-      }
-    }
-
-    // Mapeo taxonómico de especies observadas en Culiacán
-    window.addEventListener('DOMContentLoaded', () => {
-      cargarFotoINaturalistCuliacan('Handroanthus impetiginosus', 'img-amapa-rosa', 'credit-amapa-rosa');
-      cargarFotoINaturalistCuliacan('Handroanthus chrysanthus', 'img-amapa-amarilla', 'credit-amapa-amarilla');
-      cargarFotoINaturalistCuliacan('Prosopis juliflora', 'img-mesquite', 'credit-mesquite');
-      cargarFotoINaturalistCuliacan('Pithecellobium dulce', 'img-guamuchil', 'credit-guamuchil');
-      cargarFotoINaturalistCuliacan('Swietenia humilis', 'img-venadilla', 'credit-venadilla');
-      cargarFotoINaturalistCuliacan('Enterolobium cyclocarpum', 'img-huanacaxtle', 'credit-huanacaxtle');
-
-      cargarFotoINaturalistCuliacan('Calocitta colliei', 'img-urraca', 'credit-urraca');
-      cargarFotoINaturalistCuliacan('Melanerpes elegans', 'img-carpintero', 'credit-carpintero');
-      cargarFotoINaturalistCuliacan('Selasphorus rufus', 'img-colibri', 'credit-colibri');
-      cargarFotoINaturalistCuliacan('Zenaida macroura', 'img-huilota', 'credit-huilota');
-      cargarFotoINaturalistCuliacan('Ortalis wagleri', 'img-chachalaca', 'credit-chachalaca');
-      cargarFotoINaturalistCuliacan('Ardea alba', 'img-garza', 'credit-garza');
-    });
-
     document.getElementById('registro-form').addEventListener('submit', async function(e) {
       e.preventDefault();
 
