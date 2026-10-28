@@ -93,7 +93,6 @@
         <table class="w-full text-left text-sm border-collapse">
           <thead>
             <tr class="brand-green text-white">
-              <th class="p-3">ID</th>
               <th class="p-3">Lote</th>
               <th class="p-3">Árboles</th>
               <th class="p-3">Litros</th>
@@ -135,7 +134,7 @@
           alert('❌ ' + (errData.error || 'Error al guardar'));
           return;
         }
-        alert('✅ ¡Registro guardado exitosamente en Neon DB!');
+        alert('✅ ¡Registro guardado exitosamente!');
         document.getElementById('registro-form').reset();
         cargarTabla();
       } catch (err) {
@@ -154,7 +153,7 @@
         const especiesSet = new Set();
 
         if (registros.length === 0) {
-          tbody.innerHTML = `<tr><td colspan="9" class="text-center py-6 text-gray-500">No hay registros guardados.</td></tr>`;
+          tbody.innerHTML = `<tr><td colspan="8" class="text-center py-6 text-gray-500">No hay registros guardados.</td></tr>`;
         } else {
           registros.forEach(r => {
             totalArboles += Number(r.arboles);
@@ -165,8 +164,7 @@
             const fila = document.createElement('tr');
             fila.className = "hover:bg-gray-50 transition";
             fila.innerHTML = `
-              <td class="p-3 font-bold text-gray-700">#${r.id}</td>
-              <td class="p-3">${r.lote}</td>
+              <td class="p-3 font-bold text-gray-700">${r.lote}</td>
               <td class="p-3 font-semibold text-green-700">${r.arboles}</td>
               <td class="p-3">${r.litros} L</td>
               <td class="p-3">${r.especie}</td>
@@ -184,7 +182,7 @@
         document.getElementById('kpi-especies').innerText = especiesSet.size;
         document.getElementById('kpi-aves').innerText = totalAves;
       } catch (err) {
-        console.error("Error:", err);
+        console.error("Error al cargar la tabla:", err);
       }
     }
     cargarTabla();
