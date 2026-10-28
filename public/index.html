@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Ola Verde — Fauna y Flora Real de Sinaloa</title>
+  <title>La Ola Verde — Culiacán, Sinaloa</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { background-color: #f4f6f8; font-family: system-ui, -apple-system, sans-serif; }
@@ -16,8 +16,8 @@
 
   <div class="max-w-6xl mx-auto space-y-6">
     <header class="space-y-1">
-      <h1 class="text-3xl font-bold text-brand flex items-center gap-2">🌱 La Ola Verde — Panel Operativo Sinaloa</h1>
-      <p class="text-gray-600 text-sm md:text-base">Especies nativas y representativas del estado de Sinaloa.</p>
+      <h1 class="text-3xl font-bold text-brand flex items-center gap-2">🌱 La Ola Verde — Panel Culiacán, Sinaloa</h1>
+      <p class="text-gray-600 text-sm md:text-base">Monitoreo de riego, árboles nativos y fauna aviar de la región.</p>
     </header>
 
     <!-- KPIs -->
@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <!-- Formulario de Registro -->
+    <!-- Formulario -->
     <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
       <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">📋 Registro de Campo</h2>
       <form id="registro-form" class="space-y-6">
@@ -77,75 +77,75 @@
           </div>
         </div>
 
-        <!-- Especies de Árboles de Sinaloa -->
+        <!-- Árboles de Culiacán -->
         <div class="space-y-2 border-t pt-4">
-          <label class="block text-sm font-bold text-gray-800 uppercase">🌳 Árboles Nativos de Sinaloa (Opción Múltiple):</label>
-          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          <label class="block text-sm font-bold text-gray-800 uppercase">🌳 Árboles Típicos de Culiacán (Opción Múltiple):</label>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Amapa Rosa" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Handroanthus_impetiginosus_01.jpg/640px-Handroanthus_impetiginosus_01.jpg" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Amapa+Rosa'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-700 text-center">Amapa Rosa</span>
             </label>
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
+              <input type="checkbox" name="especie_chk" value="Amapa Amarilla" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
+              <img src="https://images.unsplash.com/photo-1617173944883-6ffbd35d584d?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Amapa+Amarilla'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-700 text-center">Amapa Amarilla</span>
+            </label>
+            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Mesquite" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Prosopis_glandulosa.jpg/640px-Prosopis_glandulosa.jpg" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Mesquite'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-700 text-center">Mesquite</span>
             </label>
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Guamúchil" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Pithecellobium_dulce_tree.jpg/640px-Pithecellobium_dulce_tree.jpg" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Guamuchil'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-700 text-center">Guamúchil</span>
             </label>
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Venadilla / Lirio" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Swietenia_humilis.jpg/640px-Swietenia_humilis.jpg" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Venadilla</span>
+              <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Venadilla'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-700 text-center">Venadilla / Lirio</span>
             </label>
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Huanacaxtle" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Enterolobium_cyclocarpum.jpg/640px-Enterolobium_cyclocarpum.jpg" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1511497584788-876761c11969?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Huanacaxtle'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-700 text-center">Huanacaxtle</span>
-            </label>
-            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
-              <input type="checkbox" name="especie_chk" value="Palo Blanco" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Lysiloma_watsonii.jpg/640px-Lysiloma_watsonii.jpg" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Palo Blanco</span>
             </label>
           </div>
         </div>
 
-        <!-- Especies de Aves de Sinaloa -->
+        <!-- Aves de Culiacán -->
         <div class="space-y-2 border-t pt-4">
-          <label class="block text-sm font-bold text-gray-800 uppercase">🐦 Aves Nativas y Migratorias de Sinaloa (Opción Múltiple):</label>
-          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          <label class="block text-sm font-bold text-gray-800 uppercase">🐦 Aves Frecuentes en Culiacán (Opción Múltiple):</label>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
-              <input type="checkbox" name="ave_chk" value="Paloma Huilota" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Mourning_Dove_2006.jpg/640px-Mourning_Dove_2006.jpg" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Paloma Huilota</span>
+              <input type="checkbox" name="ave_chk" value="Urraca Hermosa" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
+              <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Urraca+Hermosa'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-700 text-center">Urraca Hermosa</span>
             </label>
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Carpintero Elegante" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Melanerpes_elegans.jpg/640px-Melanerpes_elegans.jpg" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1522921820572-347e402d99bf?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Carpintero'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-700 text-center">Carpintero</span>
             </label>
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Colibrí Canelo" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Selasphorus_rufus.jpg/640px-Selasphorus_rufus.jpg" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Colibri'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-700 text-center">Colibrí</span>
             </label>
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
-              <input type="checkbox" name="ave_chk" value="Chachalaca Sinaloense" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ortalis_wagleri.jpg/640px-Ortalis_wagleri.jpg" class="w-full h-24 object-cover rounded-md mb-1">
+              <input type="checkbox" name="ave_chk" value="Paloma Huilota" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
+              <img src="https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Paloma+Huilota'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-700 text-center">Paloma Huilota</span>
+            </label>
+            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
+              <input type="checkbox" name="ave_chk" value="Chachalaca" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
+              <img src="https://images.unsplash.com/photo-1612024782955-49fae79e42bb?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Chachalaca'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-700 text-center">Chachalaca</span>
             </label>
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
-              <input type="checkbox" name="ave_chk" value="Urraca Hermosa" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Calocitta_colliei.jpg/640px-Calocitta_colliei.jpg" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Urraca Hermosa</span>
-            </label>
-            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Garza Blanca" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Ardea_alba_1.jpg/640px-Ardea_alba_1.jpg" class="w-full h-24 object-cover rounded-md mb-1">
+              <img src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Garza+Blanca'" class="w-full h-24 object-cover rounded-md mb-1">
               <span class="text-xs font-bold text-gray-700 text-center">Garza Blanca</span>
             </label>
           </div>
