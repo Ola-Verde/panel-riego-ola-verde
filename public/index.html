@@ -17,7 +17,7 @@
   <div class="max-w-6xl mx-auto space-y-6">
     <header class="space-y-1">
       <h1 class="text-3xl font-bold text-brand flex items-center gap-2">🌱 La Ola Verde — Panel Culiacán, Sinaloa</h1>
-      <p class="text-gray-600 text-sm md:text-base">Monitoreo de riego, árboles nativos y fauna aviar de la región.</p>
+      <p class="text-gray-600 text-sm md:text-base">Monitoreo y registro de ruta de riego, árboles y aves locales.</p>
     </header>
 
     <!-- KPIs -->
@@ -77,77 +77,91 @@
           </div>
         </div>
 
-        <!-- Árboles de Culiacán -->
+        <!-- Árboles -->
         <div class="space-y-2 border-t pt-4">
-          <label class="block text-sm font-bold text-gray-800 uppercase">🌳 Árboles Típicos de Culiacán (Opción Múltiple):</label>
+          <label class="block text-sm font-bold text-gray-800 uppercase">🌳 Árboles (Opción Múltiple):</label>
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+            
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Amapa Rosa" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Amapa+Rosa'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Amapa Rosa</span>
+              <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Amapa+Rosa'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-800 text-center">Amapa Rosa</span>
             </label>
+
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Amapa Amarilla" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img src="https://images.unsplash.com/photo-1617173944883-6ffbd35d584d?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Amapa+Amarilla'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Amapa Amarilla</span>
+              <img src="https://images.unsplash.com/photo-1617173944883-6ffbd35d584d?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Amapa+Amarilla'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-800 text-center">Amapa Amarilla</span>
             </label>
+
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Mesquite" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Mesquite'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Mesquite</span>
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Mesquite'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-800 text-center">Mesquite</span>
             </label>
+
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Guamúchil" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Guamuchil'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Guamúchil</span>
+              <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Guamuchil'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-800 text-center">Guamúchil</span>
             </label>
+
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Venadilla / Lirio" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Venadilla'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Venadilla / Lirio</span>
+              <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Venadilla'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-800 text-center">Venadilla / Lirio</span>
             </label>
+
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="especie_chk" value="Huanacaxtle" class="absolute top-2 left-2 w-4 h-4 text-green-600 rounded">
-              <img src="https://images.unsplash.com/photo-1511497584788-876761c11969?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Huanacaxtle'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Huanacaxtle</span>
+              <img src="https://images.unsplash.com/photo-1511497584788-876761c11969?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/2d7a31/ffffff?text=Huanacaxtle'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-800 text-center">Huanacaxtle</span>
             </label>
+
           </div>
         </div>
 
-        <!-- Aves de Culiacán -->
+        <!-- Aves -->
         <div class="space-y-2 border-t pt-4">
-          <label class="block text-sm font-bold text-gray-800 uppercase">🐦 Aves Frecuentes en Culiacán (Opción Múltiple):</label>
+          <label class="block text-sm font-bold text-gray-800 uppercase">🐦 Aves (Opción Múltiple):</label>
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+            
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Urraca Hermosa" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Urraca+Hermosa'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Urraca Hermosa</span>
+              <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Urraca+Hermosa'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-800 text-center">Urraca Hermosa</span>
             </label>
+
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Carpintero Elegante" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://images.unsplash.com/photo-1522921820572-347e402d99bf?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Carpintero'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Carpintero</span>
+              <img src="https://images.unsplash.com/photo-1522921820572-347e402d99bf?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Carpintero'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-800 text-center">Carpintero Elegante</span>
             </label>
+
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Colibrí Canelo" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Colibri'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Colibrí</span>
+              <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Colibri'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-800 text-center">Colibrí Canelo</span>
             </label>
+
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Paloma Huilota" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Paloma+Huilota'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Paloma Huilota</span>
+              <img src="https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Paloma+Huilota'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-800 text-center">Paloma Huilota</span>
             </label>
+
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Chachalaca" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://images.unsplash.com/photo-1612024782955-49fae79e42bb?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Chachalaca'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Chachalaca</span>
+              <img src="https://images.unsplash.com/photo-1612024782955-49fae79e42bb?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Chachalaca'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-800 text-center">Chachalaca</span>
             </label>
+
             <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
               <input type="checkbox" name="ave_chk" value="Garza Blanca" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Garza+Blanca'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-700 text-center">Garza Blanca</span>
+              <img src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Garza+Blanca'" class="w-full h-24 object-cover rounded-md mb-1">
+              <span class="text-xs font-bold text-gray-800 text-center">Garza Blanca</span>
             </label>
+
           </div>
         </div>
 
@@ -161,7 +175,7 @@
       </form>
     </section>
 
-    <!-- Tabla de Registros -->
+    <!-- Tabla -->
     <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
       <div class="flex justify-between items-center mb-4">
         <h2 class="text-xl font-bold text-gray-800">📊 Registros en Base de Datos</h2>
@@ -197,6 +211,7 @@
 
       const avesSel = Array.from(document.querySelectorAll('input[name="ave_chk"]:checked')).map(cb => cb.value);
       const avesCant = parseInt(document.getElementById('aves').value) || 0;
+      const avesTexto = avesSel.length > 0 ? `${avesCant} (${avesSel.join(', ')})` : `${avesCant}`;
 
       const payload = {
         lote: document.getElementById('lote').value,
