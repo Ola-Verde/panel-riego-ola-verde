@@ -122,16 +122,36 @@
         <!-- Aves Seleccionadas -->
         <div class="space-y-2 border-t pt-4">
           <label class="block text-sm font-bold text-gray-800 uppercase">🐦 Aves de Culiacán (Opción Múltiple):</label>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             
+            <!-- Colibrí pico ancho Macho -->
+            <label class="border rounded-lg p-3 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative bg-gray-50/50">
+              <input type="checkbox" name="ave_chk" value="Colibrí pico ancho Macho (Cynanthus latirostris)" class="absolute top-3 left-3 w-5 h-5 text-purple-600 rounded">
+              <div class="w-full h-36 bg-gray-100 rounded-md mb-2 overflow-hidden flex items-center justify-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Hummingbird_%28Broad-billed%3F%29_%2833175799974%29.jpg/1280px-Hummingbird_%28Broad-billed%3F%29_%2833175799974%29.jpg" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Colibri+Macho'" class="w-full h-full object-cover">
+              </div>
+              <span class="text-xs font-bold text-gray-800 text-center">Colibrí pico ancho (Macho)</span>
+              <span class="text-[10px] italic text-gray-500 text-center">(Cynanthus latirostris)</span>
+            </label>
+
+            <!-- Colibrí pico ancho Hembra -->
+            <label class="border rounded-lg p-3 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative bg-gray-50/50">
+              <input type="checkbox" name="ave_chk" value="Colibrí pico ancho Hembra (Cynanthus latirostris)" class="absolute top-3 left-3 w-5 h-5 text-purple-600 rounded">
+              <div class="w-full h-36 bg-gray-100 rounded-md mb-2 overflow-hidden flex items-center justify-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Broad-billed_Hummingbird_7802m.jpg/1280px-Broad-billed_Hummingbird_7802m.jpg" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Colibri+Hembra'" class="w-full h-full object-cover">
+              </div>
+              <span class="text-xs font-bold text-gray-800 text-center">Colibrí pico ancho (Hembra)</span>
+              <span class="text-[10px] italic text-gray-500 text-center">(Cynanthus latirostris)</span>
+            </label>
+
             <!-- Paloma aliblanca -->
             <label class="border rounded-lg p-3 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative bg-gray-50/50">
               <input type="checkbox" name="ave_chk" value="Paloma aliblanca (Zenaida asiatica)" class="absolute top-3 left-3 w-5 h-5 text-purple-600 rounded">
               <div class="w-full h-36 bg-gray-100 rounded-md mb-2 overflow-hidden flex items-center justify-center">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Zenaida_asiatica_-Tuscon_-Arizona_-USA_-8a.jpg/500px-Zenaida_asiatica_-Tuscon_-Arizona_-USA_-8a.jpg" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Paloma+Aliblanca'" class="w-full h-full object-contain p-1">
               </div>
-              <span class="text-sm font-bold text-gray-800 text-center">Paloma aliblanca</span>
-              <span class="text-xs italic text-gray-500 text-center">(Zenaida asiatica)</span>
+              <span class="text-xs font-bold text-gray-800 text-center">Paloma aliblanca</span>
+              <span class="text-[10px] italic text-gray-500 text-center">(Zenaida asiatica)</span>
             </label>
 
             <!-- Paloma huilota -->
@@ -140,8 +160,8 @@
               <div class="w-full h-36 bg-gray-100 rounded-md mb-2 overflow-hidden flex items-center justify-center">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Mourning_Dove_2006.jpg/500px-Mourning_Dove_2006.jpg" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Paloma+Huilota'" class="w-full h-full object-contain p-1">
               </div>
-              <span class="text-sm font-bold text-gray-800 text-center">Paloma huilota</span>
-              <span class="text-xs italic text-gray-500 text-center">(Zenaida macroura)</span>
+              <span class="text-xs font-bold text-gray-800 text-center">Paloma huilota</span>
+              <span class="text-[10px] italic text-gray-500 text-center">(Zenaida macroura)</span>
             </label>
 
             <!-- Zanate Macho -->
@@ -150,8 +170,8 @@
               <div class="w-full h-36 bg-gray-100 rounded-md mb-2 overflow-hidden flex items-center justify-center">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Great-tailed_grackle_%28Quiscalus_mexicanus_mexicanus%29_male_Copan.jpg/1280px-Great-tailed_grackle_%28Quiscalus_mexicanus_mexicanus%29_male_Copan.jpg" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Zanate+Macho'" class="w-full h-full object-cover">
               </div>
-              <span class="text-sm font-bold text-gray-800 text-center">Zanate mayor (Macho)</span>
-              <span class="text-xs italic text-gray-500 text-center">(Quiscalus mexicanus)</span>
+              <span class="text-xs font-bold text-gray-800 text-center">Zanate mayor (Macho)</span>
+              <span class="text-[10px] italic text-gray-500 text-center">(Quiscalus mexicanus)</span>
             </label>
 
             <!-- Zanate Hembra -->
@@ -160,8 +180,8 @@
               <div class="w-full h-36 bg-gray-100 rounded-md mb-2 overflow-hidden flex items-center justify-center">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Great-tailed_grackle_female.jpg/1280px-Great-tailed_grackle_female.jpg" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Zanate+Hembra'" class="w-full h-full object-cover">
               </div>
-              <span class="text-sm font-bold text-gray-800 text-center">Zanate mayor (Hembra)</span>
-              <span class="text-xs italic text-gray-500 text-center">(Quiscalus mexicanus)</span>
+              <span class="text-xs font-bold text-gray-800 text-center">Zanate mayor (Hembra)</span>
+              <span class="text-[10px] italic text-gray-500 text-center">(Quiscalus mexicanus)</span>
             </label>
 
           </div>
