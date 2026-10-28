@@ -17,7 +17,7 @@
   <div class="max-w-6xl mx-auto space-y-6">
     <header class="space-y-1">
       <h1 class="text-3xl font-bold text-brand flex items-center gap-2">🌱 La Ola Verde — Panel Culiacán, Sinaloa</h1>
-      <p class="text-gray-600 text-sm md:text-base">Catálogo de flora nativa y fauna aviar de Culiacán.</p>
+      <p class="text-gray-600 text-sm md:text-base">Catálogo de flora nativa y avifauna específica de Culiacán.</p>
     </header>
 
     <!-- KPIs -->
@@ -119,70 +119,41 @@
           </div>
         </div>
 
-        <!-- Aves -->
+        <!-- Aves (Filtradas a las solicitadas) -->
         <div class="space-y-2 border-t pt-4">
           <label class="block text-sm font-bold text-gray-800 uppercase">🐦 Aves de Culiacán (Opción Múltiple):</label>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             
+            <!-- Paloma aliblanca con encuadre ajustado -->
+            <label class="border rounded-lg p-3 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative bg-gray-50/50">
+              <input type="checkbox" name="ave_chk" value="Paloma aliblanca (Zenaida asiatica)" class="absolute top-3 left-3 w-5 h-5 text-purple-600 rounded">
+              <div class="w-full h-36 bg-gray-100 rounded-md mb-2 overflow-hidden flex items-center justify-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Zenaida_asiatica_-Tuscon_-Arizona_-USA_-8a.jpg/500px-Zenaida_asiatica_-Tuscon_-Arizona_-USA_-8a.jpg" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Paloma+Aliblanca'" class="w-full h-full object-contain p-1">
+              </div>
+              <span class="text-sm font-bold text-gray-800 text-center">Paloma aliblanca</span>
+              <span class="text-xs italic text-gray-500 text-center">(Zenaida asiatica)</span>
+            </label>
+
             <!-- Zanate Macho -->
-            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
-              <input type="checkbox" name="ave_chk" value="Zanate mayor Macho (Quiscalus mexicanus)" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Great-tailed_grackle_%28Quiscalus_mexicanus_mexicanus%29_male_Copan.jpg/1280px-Great-tailed_grackle_%28Quiscalus_mexicanus_mexicanus%29_male_Copan.jpg" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Zanate+Macho'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-800 text-center">Zanate mayor (Macho)</span>
-              <span class="text-[10px] italic text-gray-500 text-center">(Quiscalus mexicanus)</span>
+            <label class="border rounded-lg p-3 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative bg-gray-50/50">
+              <input type="checkbox" name="ave_chk" value="Zanate mayor Macho (Quiscalus mexicanus)" class="absolute top-3 left-3 w-5 h-5 text-purple-600 rounded">
+              <div class="w-full h-36 bg-gray-100 rounded-md mb-2 overflow-hidden flex items-center justify-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Great-tailed_grackle_%28Quiscalus_mexicanus_mexicanus%29_male_Copan.jpg/1280px-Great-tailed_grackle_%28Quiscalus_mexicanus_mexicanus%29_male_Copan.jpg" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Zanate+Macho'" class="w-full h-full object-cover">
+              </div>
+              <span class="text-sm font-bold text-gray-800 text-center">Zanate mayor (Macho)</span>
+              <span class="text-xs italic text-gray-500 text-center">(Quiscalus mexicanus)</span>
             </label>
 
             <!-- Zanate Hembra -->
-            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
-              <input type="checkbox" name="ave_chk" value="Zanate mayor Hembra (Quiscalus mexicanus)" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Great-tailed_grackle_female.jpg/1280px-Great-tailed_grackle_female.jpg" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Zanate+Hembra'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-800 text-center">Zanate mayor (Hembra)</span>
-              <span class="text-[10px] italic text-gray-500 text-center">(Quiscalus mexicanus)</span>
+            <label class="border rounded-lg p-3 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative bg-gray-50/50">
+              <input type="checkbox" name="ave_chk" value="Zanate mayor Hembra (Quiscalus mexicanus)" class="absolute top-3 left-3 w-5 h-5 text-purple-600 rounded">
+              <div class="w-full h-36 bg-gray-100 rounded-md mb-2 overflow-hidden flex items-center justify-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Great-tailed_grackle_female.jpg/1280px-Great-tailed_grackle_female.jpg" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Zanate+Hembra'" class="w-full h-full object-cover">
+              </div>
+              <span class="text-sm font-bold text-gray-800 text-center">Zanate mayor (Hembra)</span>
+              <span class="text-xs italic text-gray-500 text-center">(Quiscalus mexicanus)</span>
             </label>
 
-            <!-- Paloma Aliblanca -->
-            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
-              <input type="checkbox" name="ave_chk" value="Paloma aliblanca (Zenaida asiatica)" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Zenaida_asiatica_-Tuscon_-Arizona_-USA_-8a.jpg/500px-Zenaida_asiatica_-Tuscon_-Arizona_-USA_-8a.jpg" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Paloma+Aliblanca'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-800 text-center">Paloma aliblanca</span>
-              <span class="text-[10px] italic text-gray-500 text-center">(Zenaida asiatica)</span>
-            </label>
-
-            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
-              <input type="checkbox" name="ave_chk" value="Urraca Hermosa" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Urraca+Hermosa'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-800 text-center">Urraca Hermosa</span>
-            </label>
-
-            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
-              <input type="checkbox" name="ave_chk" value="Carpintero Elegante" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://images.unsplash.com/photo-1522921820572-347e402d99bf?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Carpintero'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-800 text-center">Carpintero Elegante</span>
-            </label>
-
-            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
-              <input type="checkbox" name="ave_chk" value="Colibrí Canelo" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Colibri'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-800 text-center">Colibrí Canelo</span>
-            </label>
-
-            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
-              <input type="checkbox" name="ave_chk" value="Paloma Huilota" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Paloma+Huilota'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-800 text-center">Paloma Huilota</span>
-            </label>
-
-            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
-              <input type="checkbox" name="ave_chk" value="Chachalaca" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://images.unsplash.com/photo-1612024782955-49fae79e42bb?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Chachalaca'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-800 text-center">Chachalaca</span>
-            </label>
-
-            <label class="border rounded-lg p-2 flex flex-col items-center cursor-pointer hover:bg-gray-50 border-gray-200 relative">
-              <input type="checkbox" name="ave_chk" value="Garza Blanca" class="absolute top-2 left-2 w-4 h-4 text-purple-600 rounded">
-              <img src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=400&q=80" onerror="this.src='https://placehold.co/300x200/7e22ce/ffffff?text=Garza+Blanca'" class="w-full h-24 object-cover rounded-md mb-1">
-              <span class="text-xs font-bold text-gray-800 text-center">Garza Blanca</span>
-            </label>
           </div>
         </div>
 
